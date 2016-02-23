@@ -1,13 +1,13 @@
-{% set version = "0.6" %}
+{% set version = "0.7.1" %}
 
 package:
   name: pint
   version: {{ version }}
 
 source:
-  fn: Pint-{{version}}.zip
-  url: https://pypi.python.org/packages/source/P/Pint/Pint-{{version}}.zip
-  md5: 88aa0918019071546b10c5fbdc91ae5e
+  fn: Pint-{{version}}.tar.gz
+  url: https://pypi.python.org/packages/source/P/Pint/Pint-{{version}}.tar.gz
+  md5: 1aa8d5188c6216cf42f0c7b7ea75ed07
 
 build:
     script: python setup.py install --single-version-externally-managed --record record.txt
