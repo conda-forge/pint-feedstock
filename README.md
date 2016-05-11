@@ -5,7 +5,7 @@ Home: https://github.com/hgrecco/pint
 
 Package license: BSD
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Physical quantities module
 
@@ -72,6 +72,11 @@ Current build status
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pint-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/pint-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pint-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pint-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pint-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pint-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pint/badges/version.svg)](https://anaconda.org/conda-forge/pint)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pint/badges/downloads.svg)](https://anaconda.org/conda-forge/pint)
 
 
 Updating pint-feedstock
