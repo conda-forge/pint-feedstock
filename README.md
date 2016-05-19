@@ -3,7 +3,7 @@ About pint
 
 Home: https://github.com/hgrecco/pint
 
-Package license: BSD
+Package license: BSD 3-Clause
 
 Feedstock license: BSD 3-Clause
 
