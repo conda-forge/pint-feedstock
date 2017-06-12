@@ -1,6 +1,6 @@
 {% set name = "Pint" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "26dd81ede14f69054acd45a49c9b8059c5a88eccc547fa872b74961198c6a57e" %}
+{% set version = "0.8.1" %}
+{% set sha256 = "afcf31443a478c32bbac4b00337ee9026a13d0e2ac83d30c79151462513bb0d4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{name}}-{{version}}.tar.gz
-  url: https://pypi.io/packages/source/{{name[0]}}/{{name}}/{{name}}-{{version[:3]}}.tar.gz
+  url: https://pypi.io/packages/source/{{name[0]}}/{{name}}/{{name}}-{{version}}.tar.gz
   sha256: {{sha256}}
 
 build:
