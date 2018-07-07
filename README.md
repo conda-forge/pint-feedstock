@@ -22,14 +22,15 @@ patching or wrapping numpy.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pint-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pint-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pint-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pint-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pint-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pint-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/pint-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/pint-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pint/badges/version.svg)](https://anaconda.org/conda-forge/pint)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pint/badges/downloads.svg)](https://anaconda.org/conda-forge/pint)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pint-green.svg)](https://anaconda.org/conda-forge/pint) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pint.svg)](https://anaconda.org/conda-forge/pint) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pint.svg)](https://anaconda.org/conda-forge/pint) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pint.svg)](https://anaconda.org/conda-forge/pint) |
 
 Installing pint
 ===============
@@ -74,6 +75,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
