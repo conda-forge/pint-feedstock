@@ -1,6 +1,6 @@
 {% set name = "Pint" %}
-{% set version = "0.9" %}
-{% set sha256 = "32d8a9a9d63f4f81194c0014b3b742679dce81a26d45127d9810a68a561fe4e2" %}
+{% set version = "0.10" %}
+{% set sha256 = "38a4d6e242b8bab693cd83a5f5ade3d816463b498658e7ab14ce64c4d458c88b" %}
 
 package:
   name: {{ name|lower }}
@@ -14,8 +14,8 @@ source:
     - fix-import.patch  # [py27]
 
 build:
-    script: python -m pip install --no-deps --ignore-installed .
-    number: 2
+    script: {{ PYTHON }} -m pip install . --no-deps -vv
+    number: 0
 
 requirements:
   host:
