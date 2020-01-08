@@ -1,6 +1,6 @@
 {% set name = "Pint" %}
-{% set version = "0.10" %}
-{% set sha256 = "38a4d6e242b8bab693cd83a5f5ade3d816463b498658e7ab14ce64c4d458c88b" %}
+{% set version = "0.10.1" %}
+{% set sha256 = "d739c364b8326fe3d70773d5720fa8b005ea6158695cad042677a588480c86e6" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ source:
 build:
     noarch: python
     script: {{ PYTHON }} -m pip install . --no-deps -vv
-    number: 1
+    number: 0
 
 requirements:
   host:
