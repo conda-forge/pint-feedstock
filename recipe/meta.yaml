@@ -14,14 +14,15 @@ source:
 build:
     noarch: python
     script: {{ PYTHON }} -m pip install . --no-deps -vv
-    number: 0
+    number: 1
 
 requirements:
   host:
     - pip
+    - wheel
     - python >=3.6
-    - setuptools
-    - setuptools_scm
+    - setuptools >=42
+    - setuptools_scm >=3.4
 
   run:
     - python >=3.6
@@ -30,6 +31,8 @@ requirements:
 test:
   imports:
     - pint
+  commands:
+    - python -c "import pint; ver = pint.__version__; assert ver != '0.0.0'"
 
 about:
   home: https://github.com/hgrecco/pint
