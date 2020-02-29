@@ -14,7 +14,7 @@ source:
 build:
     noarch: python
     script: {{ PYTHON }} -m pip install . --no-deps -vv
-    number: 0
+    number: 1
 
 requirements:
   host:
@@ -25,11 +25,14 @@ requirements:
 
   run:
     - python >=3.6
+    - pip
     - setuptools
 
 test:
   imports:
     - pint
+  commands: 
+    - pip check
 
 about:
   home: https://github.com/hgrecco/pint
