@@ -14,7 +14,7 @@ source:
 build:
     noarch: python
     script:
-      - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+      - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
       - echo "<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>"
       - echo $SETUPTOOLS_SCM_PRETEND_VERSION
       - echo "<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>"
@@ -24,7 +24,6 @@ build:
 requirements:
   host:
     - pip
-    - wheel
     - python >=3.6
     - setuptools >=42
     - setuptools_scm >=3.4
