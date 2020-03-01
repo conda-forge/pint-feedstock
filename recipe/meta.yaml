@@ -13,7 +13,7 @@ source:
 
 build:
     noarch: python
-    script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ python }} -m pip install . --no-deps
+    script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . --no-deps -v
     number: 1
 
 requirements:
