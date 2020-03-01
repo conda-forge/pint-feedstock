@@ -15,10 +15,7 @@ build:
     noarch: python
     script:
       - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-      - echo "<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>"
-      - echo $SETUPTOOLS_SCM_PRETEND_VERSION
-      - echo "<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>"
-      - python setup.py install --single-version-externally-managed --record record.txt
+      - {{ python }} -m pip install . --no-deps
     number: 1
 
 requirements:
