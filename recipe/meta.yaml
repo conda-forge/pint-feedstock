@@ -13,16 +13,14 @@ source:
 
 build:
     noarch: python
-    script:
-      - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-      - {{ python }} -m pip install . --no-deps
+    script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ python }} -m pip install . --no-deps
     number: 1
 
 requirements:
   host:
     - pip
     - python >=3.6
-    - setuptools >=42
+    - setuptools >=45
     - setuptools_scm >=3.4
 
   run:
