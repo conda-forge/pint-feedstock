@@ -13,9 +13,7 @@ source:
 
 build:
     noarch: python
-    script:
-      - "{{ PYTHON }} setup.py bdist_wheel --dist-dir=dist"
-      - "{{ PYTHON }} -m pip install --find-links=dist --no-deps --ignore-installed --no-cache-dir -vvv {{ name }}"
+    script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . --no-deps -vv
     number: 1
 
 requirements:
