@@ -22,6 +22,7 @@ requirements:
     - python >=3.6
     - setuptools >=45
     - setuptools_scm >=3.4
+    - toml
 
   run:
     - python >=3.6
