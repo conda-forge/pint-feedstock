@@ -5,7 +5,7 @@ Home: https://github.com/hgrecco/pint
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Operate and manipulate physical quantities in Python
 
