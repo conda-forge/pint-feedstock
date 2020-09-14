@@ -1,6 +1,6 @@
 {% set name = "Pint" %}
-{% set version = "0.15" %}
-{% set sha256 = "73b517bc4e49d199eb8ae9ed49104d74a11e596849ad2330b58c09e1eb6f327d" %}
+{% set version = "0.16" %}
+{% set sha256 = "e437420e65fa72a2805f4036f986669c48d54944eeb0e47c8ba16f98cbdcd599" %}
 
 package:
   name: {{ name|lower }}
