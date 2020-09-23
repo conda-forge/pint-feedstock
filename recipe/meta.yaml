@@ -1,6 +1,6 @@
 {% set name = "Pint" %}
-{% set version = "0.16" %}
-{% set sha256 = "e437420e65fa72a2805f4036f986669c48d54944eeb0e47c8ba16f98cbdcd599" %}
+{% set version = "0.16.1" %}
+{% set sha256 = "d43a2e9ae003164978b60fdf8cd920d8581e1a5991df8dded29b00f4850ec83a" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -v
-  number: 1
+  number: 0
 
 requirements:
   host:
