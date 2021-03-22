@@ -5,9 +5,13 @@ Home: https://github.com/hgrecco/pint
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pint-feedstock/blob/master/LICENSE.txt)
 
 Summary: Operate and manipulate physical quantities in Python
+
+Development: https://github.com/hgrecco/pint
+
+Documentation: http://pint.readthedocs.org/
 
 Pint is a Python package to define, operate and manipulate physical
 quantities: the product of a numerical value and a unit of measurement.
@@ -116,9 +120,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
