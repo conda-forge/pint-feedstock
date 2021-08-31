@@ -1,6 +1,5 @@
 {% set name = "Pint" %}
 {% set version = "0.17" %}
-{% set sha256 = "f4d0caa713239e6847a7c6eefe2427358566451fe56497d533f21fb590a3f313" %}
 
 package:
   name: {{ name|lower }}
@@ -9,12 +8,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: f4d0caa713239e6847a7c6eefe2427358566451fe56497d533f21fb590a3f313
 
 build:
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -v
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -35,7 +34,11 @@ test:
   imports:
     - pint
   commands:
+    - pip check
     - python -c "import pint; ver = pint.__version__; assert ver != '0.0.0'"
+    - pint-convert --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/hgrecco/pint
@@ -52,7 +55,7 @@ about:
     (or even rewrite!) the complete list without changing the source code.
     It supports a lot of numpy mathematical operations without monkey
     patching or wrapping numpy.
-  doc_url: http://pint.readthedocs.org/
+  doc_url: https://pint.readthedocs.org/
   dev_url: https://github.com/hgrecco/pint
 
 extra:
