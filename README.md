@@ -11,7 +11,7 @@ Summary: Operate and manipulate physical quantities in Python
 
 Development: https://github.com/hgrecco/pint
 
-Documentation: http://pint.readthedocs.org/
+Documentation: https://pint.readthedocs.org/
 
 Pint is a Python package to define, operate and manipulate physical
 quantities: the product of a numerical value and a unit of measurement.
@@ -50,6 +50,7 @@ Installing `pint` from the `conda-forge` channel can be achieved by adding `cond
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `pint` can be installed with:
