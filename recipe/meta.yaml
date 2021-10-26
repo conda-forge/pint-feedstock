@@ -1,5 +1,5 @@
 {% set name = "Pint" %}
-{% set version = "0.17" %}
+{% set version = "0.18" %}
 
 package:
   name: {{ name|lower }}
@@ -8,27 +8,25 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f4d0caa713239e6847a7c6eefe2427358566451fe56497d533f21fb590a3f313
+  sha256: 8c4bce884c269051feb7abc69dbfd18403c0c764abc83da132e8a7222f8ba801
 
 build:
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -v
-  number: 1
+  number: 0
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
     - setuptools >=45
     - setuptools_scm >=3.4
     - toml
 
   run:
-    - python >=3.6
-    - setuptools
+    - python >=3.7
     - packaging
     - importlib_metadata
-    - importlib_resources
 
 test:
   imports:
