@@ -18,15 +18,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
     - setuptools >=45
     - setuptools_scm >=3.4
     - toml
 
   run:
-    - python >=3.7
-    - packaging
-    - importlib_metadata
+    - python >=3.8
 
 test:
   imports:
