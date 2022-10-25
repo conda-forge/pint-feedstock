@@ -1,5 +1,5 @@
 {% set name = "Pint" %}
-{% set version = "0.19.2" %}
+{% set version = "0.20" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e1d4989ff510b378dad64f91711e7bdabe5ca78d75b06a18569ac454678c4baf
+  sha256: 4035f6d1431913afd86a056959e35d342399b0ab7d6f8cad1f0f6058dc83fad8
 
 build:
   noarch: python
