@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/{{ name }}/Pint-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 3e98bdf01f4dcf840cc0207c0b6f7510d4e0c6288efc1bf470626e875c831172
 
 build:
