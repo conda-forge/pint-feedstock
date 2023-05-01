@@ -1,11 +1,11 @@
-About pint
-==========
+About pint-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pint-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/hgrecco/pint
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pint-feedstock/blob/main/LICENSE.txt)
 
 Summary: Operate and manipulate physical quantities in Python
 
