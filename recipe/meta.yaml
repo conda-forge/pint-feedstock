@@ -1,14 +1,13 @@
 {% set name = "Pint" %}
-{% set version = "0.19.1" %}
+{% set version = "0.22" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3e5913e4ad125f672f72e19e06a8cb1f6d36a4922b6e5a49e04ff882511f82c8
+  sha256: 2d139f6abbcf3016cad7d3cec05707fe908ac4f99cf59aedfd6ee667b7a64433
 
 build:
   noarch: python
@@ -25,6 +24,7 @@ requirements:
 
   run:
     - python >=3.8
+    - typing_extensions
 
 test:
   imports:
@@ -56,4 +56,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - jan-janssen
     - dopplershift
