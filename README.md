@@ -158,4 +158,5 @@ Feedstock Maintainers
 =====================
 
 * [@dopplershift](https://github.com/dopplershift/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 
