@@ -25,6 +25,7 @@ requirements:
     - python >=3.9
     - typing_extensions
     - flexcache
+    - flexparser
   run_constrained:
     - numpy <2.0.0a0
 
