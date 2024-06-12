@@ -12,17 +12,17 @@ source:
 build:
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -v
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python >=3.10
     - setuptools >=45
     - setuptools_scm >=3.4
     - toml
   run:
-    - python >=3.9
+    - python >=3.10
     - appdirs
     - flexcache
     - flexparser
