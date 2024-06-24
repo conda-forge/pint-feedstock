@@ -1,5 +1,5 @@
 {% set name = "Pint" %}
-{% set version = "0.24" %}
+{% set version = "0.24.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pint-{{ version }}.tar.gz
-  sha256: c6c7c027b821413db1ac46b3b7bd296592848b5aec29a88cfc6e378fd1371903
+  sha256: 8849fe9d7b8532e5a5dc41e719e9e19268e18eac179d9a5645f21929a2a15caf
 
 build:
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -v
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -22,10 +22,11 @@ requirements:
     - setuptools_scm >=3.4
     - toml
   run:
+    - typing-extensions
     - python >=3.10
-    - appdirs
-    - flexcache
-    - flexparser
+    - appdirs >=1.4.4
+    - flexcache >=0.3
+    - flexparser >=0.3
     - typing_extensions
   run_constrained:
     - numpy >=1.23
