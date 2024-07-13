@@ -1,5 +1,5 @@
 {% set name = "Pint" %}
-{% set version = "0.24.1" %}
+{% set version = "0.24.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pint-{{ version }}.tar.gz
-  sha256: 8849fe9d7b8532e5a5dc41e719e9e19268e18eac179d9a5645f21929a2a15caf
+  sha256: d54771093e8b94c4e0a35ac638c2444ddf3ef685652bab7675ffecfa0c5c5cdf
 
 build:
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -v
-  number: 1
+  number: 0
 
 requirements:
   host:
