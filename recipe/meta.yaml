@@ -17,17 +17,16 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9,<3.13
+    - python >=3.9
     - setuptools >=45
     - setuptools_scm >=3.4
     - toml
   run:
-    - typing-extensions
-    - python >=3.9,<3.13
-    - appdirs >=1.4.4
+    - python >=3.9
+    - platformdirs >=2.1.0
     - flexcache >=0.3
-    - flexparser >=0.3,<0.4
-    - typing_extensions
+    - flexparser >=0.4
+    - typing_extensions >=4.0.0
   run_constrained:
     - numpy >=1.23
 
