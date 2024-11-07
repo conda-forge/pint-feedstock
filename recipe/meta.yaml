@@ -6,27 +6,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pint-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pint-{{ version }}.tar.gz
   sha256: d54771093e8b94c4e0a35ac638c2444ddf3ef685652bab7675ffecfa0c5c5cdf
 
 build:
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -v
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python >=3.9,<3.13
     - setuptools >=45
     - setuptools_scm >=3.4
     - toml
   run:
     - typing-extensions
-    - python >=3.9
+    - python >=3.9,<3.13
     - appdirs >=1.4.4
     - flexcache >=0.3
-    - flexparser >=0.3
+    - flexparser >=0.3,<0.4
     - typing_extensions
   run_constrained:
     - numpy >=1.23
