@@ -12,17 +12,17 @@ source:
 build:
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -v
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=45
     - setuptools_scm >=3.4
     - toml
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - platformdirs >=2.1.0
     - flexcache >=0.3
     - flexparser >=0.4
@@ -39,6 +39,7 @@ test:
     - pint-convert --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/hgrecco/pint
