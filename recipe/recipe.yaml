@@ -1,50 +1,54 @@
-{% set name = "Pint" %}
-{% set version = "0.24.4" %}
+schema_version: 1
+
+context:
+  name: Pint
+  version: 0.24.4
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pint-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pint-${{ version }}.tar.gz
   sha256: 35275439b574837a6cd3020a5a4a73645eb125ce4152a73a2f126bf164b91b80
 
 build:
+  number: 2
   noarch: python
-  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -v
-  number: 1
+  script: SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -v
 
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools >=45
     - setuptools_scm >=3.4
     - toml
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - platformdirs >=2.1.0
     - flexcache >=0.3
     - flexparser >=0.4
     - typing_extensions >=4.0.0
-  run_constrained:
+  run_constraints:
     - numpy >=1.23
 
-test:
-  imports:
-    - pint
-  commands:
-    - pip check
-    - python -c "import pint; ver = pint.__version__; assert ver != '0.0.0'"
-    - pint-convert --help
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - pint
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+      - "python -c \"import pint; ver = pint.__version__; assert ver != '0.0.0'\""
+      - pint-convert --help
 
 about:
-  home: https://github.com/hgrecco/pint
   license: BSD-3-Clause
-  license_family: BSD
   license_file: LICENSE
   summary: Operate and manipulate physical quantities in Python
   description: |
@@ -56,8 +60,9 @@ about:
     (or even rewrite!) the complete list without changing the source code.
     It supports a lot of numpy mathematical operations without monkey
     patching or wrapping numpy.
-  doc_url: https://pint.readthedocs.org/
-  dev_url: https://github.com/hgrecco/pint
+  homepage: https://github.com/hgrecco/pint
+  repository: https://github.com/hgrecco/pint
+  documentation: https://pint.readthedocs.org/
 
 extra:
   recipe-maintainers:
