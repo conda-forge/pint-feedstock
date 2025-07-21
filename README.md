@@ -22,7 +22,6 @@ units, prefixes and constants. Due to its modular design, you can extend
 It supports a lot of numpy mathematical operations without monkey
 patching or wrapping numpy.
 
-
 Current build status
 ====================
 
