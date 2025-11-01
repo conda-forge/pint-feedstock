@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: Pint
-  version: "0.25"
+  version: "0.25.1"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pint-${{ version }}.tar.gz
-  sha256: 22911a30d682ee0540d656571c19a7b1806ce00b2be88a16f67218108b7b8cc2
+  sha256: 34e6f89bfbfca94f29bde65c9ea42c1c56e05426692c655a3ee6f3ca2a92d252
 
 build:
   number: 0
