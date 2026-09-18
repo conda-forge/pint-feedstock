@@ -3,7 +3,7 @@ schema_version: 1
 context:
   name: Pint
   version: "0.26.1"
-  python_min: "3.11"
+  python_min: "3.12"
 
 package:
   name: ${{ name|lower }}
@@ -30,7 +30,7 @@ requirements:
     - flexparser >=0.4
     - typing_extensions >=4.0.0
   run_constraints:
-    - numpy >=1.23
+    - numpy >=2.0.0
 
 tests:
   - python:
